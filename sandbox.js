@@ -135,7 +135,7 @@ people.forEach(person => {
     
     //console.log(person);        //vivod tekstovogo massiva
 //});
-
+/*
 let array = [89,46,0,35,1,-2,35];
 
 let sortArray = (array) => {
@@ -154,3 +154,141 @@ let sortArray = (array) => {
 };
 console.log(`sorted array is: ${sortArray(array)}`);
 console.log(array);
+*/
+// objects 
+/*
+let user = {
+    name: 'Deniss',
+    age: 30,
+    email: 'deniss@gmail.com',
+    location: 'Latvia',
+    blogs: ['Why 2020 is the best year','Why burgers is good'],
+    login() {
+        console.log('The user logged in');
+    },
+    logout()  {
+        console.log('The user is logged out');
+    },
+    logBlogs()  {
+        //console.log(this.blogs[1]);
+        this.blogs.forEach(person => {
+            console.log(`User blog : ${person}`);        //vivod tekstovogo massiva
+        });
+    },
+
+};
+//console.log(this )
+
+user.name = 'Alex';
+console.log(user.logBlogs());
+
+const key = 'blogs';
+console.log(user[key]);
+
+//Create object Car - 3 properties, 2 methods.
+//log one property one method
+
+let car = {
+    brand: 'bmw',
+    engine: 'disel',
+    country: 'Germany',
+    fuel : function(){
+        console.log('Please give me fuel');
+    },
+    demagedTire: function(){
+        console.log('Tire is broken');
+    }
+    
+}
+
+console.log(car.brand);
+*/
+/*
+//MATH OBJ
+
+console.log(Math);
+
+const number = 7.222;
+
+console.log(Math.round(number));
+console.log(Math.floor(number));
+console.log(Math.ceil(number));
+console.log(Math.trunc(number));
+
+
+const random = Math.random();
+console.log(random);                //random 0-100
+console.log(Math.round(random*100));
+
+
+let = array = [{name: 'Deniss', age: 27},{name: 'Max', age: 23}]
+console.log(array[0].name);
+*/
+/*
+//Scrabble 7 letters in hand
+
+let = array1 = [
+    {title: "N", score: 1},
+    {title: "K", score: 5},
+    {title: "Z", score: 10},
+    {title: "X", score: 8},
+    {title: "D", score: 2},
+    {title: "A", score: 1},
+    {title: "E", score: 1},
+]
+
+let arrayObjects = function(array1){
+    let sum = 0;
+    array1.forEach(element => {
+        sum += element.score;
+    });
+    
+return sum;
+
+}
+console.log(arrayObjects(array1));
+
+//Primitive Type vs Reference Type
+//Primitive types
+//numbers,sctrings,booleand,...
+
+//reference type
+//all tpe of objects,arrays,functions
+
+//primitive type
+let scoreOne = 50;
+let scoreTwo = scoreOne;
+scoreOne = 100
+console.log(`scoreOne: ${scoreOne} , scoreTwo ${scoreTwo}`);
+
+//reference type
+
+let userOne = {name:'Deniss',age: 30}
+let userTwo = userOne;
+
+console.log(userOne, userTwo);
+userTwo.age = 40;
+console.log(userOne, userTwo);
+
+//function toArray
+//accapts objects
+//returns Array
+//object - {a: 1, b:1}
+//return [["a",1],["b",2]]
+*/
+
+const latters = {a:1 , b:1};
+let arr = 100;
+let letters2 = function (transform){
+
+    console.log(Object.values(latters));
+ 
+}
+
+const test = Object.keys(latters);
+
+const test2 = Object.values(latters);
+
+const entries = Object.entries(latters);
+const newArray = entries[0].concat(entries[1]);
+console.log(newArray)
