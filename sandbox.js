@@ -66,3 +66,5 @@ for (let i = 0; i < ages.length; i++){
         console.log('You too young for alco');
     }
 }
+
+//comment
