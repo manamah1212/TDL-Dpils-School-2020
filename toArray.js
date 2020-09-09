@@ -53,7 +53,8 @@ let rectengle = {
         return this.edge1 * this.edge2;
     },
     getInfo: function () {
-        console.log(`rectangle value edge1: ${this.edge1} ,edge2: ${this.edge2}`);
+   //     console.log(`rectangle value edge1: ${this.edge1} ,edge2: ${this.edge2}`);
+        return `rectangle value edge1: ${this.edge1} ,edge2: ${this.edge2}`
     }
 }
 
