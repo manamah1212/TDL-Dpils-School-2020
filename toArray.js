@@ -41,3 +41,23 @@ console.log(save);
 
 }
 saveToArray();
+
+
+const toArray = (obj) => {
+    var arrOFarr = [];
+
+    for (let key in obj) {
+        arrOFarr.push([key, obj[key]]);
+    }
+    return arrOFarr;
+};
+
+console.log(
+    toArray(
+        (obj = {
+            a: 1,
+            b: 2,
+            c: 3,
+        })
+    )
+);
