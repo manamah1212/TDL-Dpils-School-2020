@@ -1,24 +1,49 @@
 //const url = 'https://www.google.com';
 module.exports = {
-        function (client) {
+    function (client) {
+        const selectors = {
+            fileInput: 'input[type="file"]',
+            dowloadLink: 'a[href*="https://file.io"]'
+        };
+        const filePath = ['.', 'assets', 'Cat03.jpg'];
+        const timeout = 5 * 1000;
+        const uploadTimeout = 10 * 1000;
+
+        prepare();
+        uploadFile();
+        openLink();
+
+        function prepare() {
             client
                 .url('https://www.file.io/')
-                .pause(3 * 1000)
-                .waitForElementVisible('body', 5 * 1000)
-                .waitForElementPresent('input[type="file"]', 5 * 1000)
-                .setValue('input[type="file"]', require('path').resolve('.', 'assets', 'Cat03.jpg')) // zagruzka faila na sait
-                .pause(5 * 1000)
-                .getText('a[href*="https://file.io"]', result => {
-                        const url = result.value; //soxranenie polucenoj ssilki v peremennuju
-                        console.log(url) //polucenie ssilki zagruzenogo faila
-                        client.execute(
+                .waitForElementVisible('body', timeout)
+                .waitForElementPresent(selectors.fileInput, timeout);
+        }
+
+        function uploadFile() {
+            client
+                .setValue(selectors.fileInput, require('path').resolve(...filePath)) // zagruzka faila na sait
+                .waitForElementVisible(selectors.dowloadLink,uploadTimeout);
+        }
+
+        function openLink() {
+            client.getText(selectors.dowloadLink, result => {
+                    openNewTab(result.value);
+                    // const url = result.value; //soxranenie polucenoj ssilki v peremennuju
+                    // console.log(url)
+                    //polucenie ssilki zagruzenogo faila
+
+                    function openNewTab() {
+                        client
+                            .execute(
                                 function (url) {
-                                    window.open(url);//otkritie ssilki polucenoj v peremennoj url
+                                    window.open(url); //otkritie ssilki polucenoj v peremennoj url
                                 },
                                 [url]
                             )
-                            .pause(3 * 1000); //otkritie polucennogo adressa
+                            .pause(timeout); //otkritie polucennogo adressa
                     }
-                )}
+                });
             }
-        
+        }
+    };
