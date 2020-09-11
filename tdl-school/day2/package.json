@@ -1,0 +1,16 @@
+{
+  "name": "day1",
+  "version": "1.0.0",
+  "description": "Website automation using Nightwotch (Day 1)",
+  "main": "index.js",
+  "scripts": {
+    "test": "./node_modules/nightwatch/bin/nightwatch"
+  },
+  "author": "Jevgenij Greibo",
+  "license": "ISC",
+  "devDependencies": {
+    "chromedriver": "85.0.1",
+    "geckodriver": "1.20.0",
+    "nightwatch": "1.4.1"
+  }
+}
