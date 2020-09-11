@@ -1,28 +1,19 @@
 <?xml version="1.0" encoding="UTF-8" ?>
-<testsuites errors="1"
+<testsuites errors="0"
             failures="0"
-            tests="1">
+            tests="0">
 
   <testsuite name="simpleTest"
-    errors="1" failures="0" hostname="" id="" package="simpleTest" skipped="0"
-    tests="1" time="13.38" timestamp="">
-  
-    <testcase name="function" classname="simpleTest" time="13.38" assertions="0">
-    <error message="An error occurred while running .click() command on &lt;#introAgreeButton&gt;: " type="error"><![CDATA[
-    NoSuchElementError: An error occurred while running .click() command on &lt;#introAgreeButton&gt;: 
-    at ClickElement.noSuchElementError (/Users/siatestdevlab/Documents/TDL-Dpils-School-2020/TDL-Dpils-School-2020/tdl-school/day1/node_modules/nightwatch/lib/element/command.js:370:12)
-    at Object.errorHandler (/Users/siatestdevlab/Documents/TDL-Dpils-School-2020/TDL-Dpils-School-2020/tdl-school/day1/node_modules/nightwatch/lib/api/element-commands/_baseElementCommand.js:42:30)
-    at PeriodicPromise.runAction (/Users/siatestdevlab/Documents/TDL-Dpils-School-2020/TDL-Dpils-School-2020/tdl-school/day1/node_modules/nightwatch/lib/utils/periodic-promise.js:64:29)
-    at processTicksAndRejections (internal/process/task_queues.js:97:5)
-    ]]></error>
-    
-    </testcase>
+    errors="0" failures="0" hostname="" id="" package="simpleTest" skipped="0"
+    tests="0" time="0.000" timestamp="">
   
 
   
     <system-err>
-        NoSuchElementError: An error occurred while running .click() command on &lt;#introAgreeButton&gt;: 
-   {&#34;sessionId&#34;:&#34;bb2ab49139d647a2a2005ed9b3f8356e&#34;,&#34;status&#34;:0,&#34;value&#34;:[]}
+        TypeError: client.url(...).pause(...).waitForElemntVisible is not a function
+   - writing an ES6 async test case? - keep in mind that commands return a Promise; 
+   - writing unit tests? - make sure to specify &#34;unit_tests_mode=true&#34; in your config.
+       at Object.function (/Users/siatestdevlab/Documents/TDL-Dpils-School-2020/TDL-Dpils-School-2020/tdl-school/day2/tests/file_io_test.js:6:14)
        at processTicksAndRejections (internal/process/task_queues.js:97:5)
     </system-err>
   
